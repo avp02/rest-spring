@@ -28,4 +28,4 @@ target/
 hs_err_pid*
 
 # resources
-src/main/resources/application.properties/spring.datasource.*
+src/main/resources/application.properties.*
