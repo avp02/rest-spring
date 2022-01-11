@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public interface CustomerService {
 
-    Customer getById(Integer id);
+    Customer findById(Integer id);
 
     Collection<Customer> getAll();
 

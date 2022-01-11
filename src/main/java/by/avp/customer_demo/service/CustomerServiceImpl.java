@@ -4,6 +4,7 @@ import by.avp.customer_demo.model.Customer;
 import by.avp.customer_demo.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -13,12 +14,13 @@ import java.util.Collection;
 @Slf4j
 public class CustomerServiceImpl implements CustomerService{
 
+//    @Autowired
     private final CustomerRepository customerRepository;
 
     @Override
-    public Customer getById(Integer id) {
+    public Customer findById(Integer id) {
         log.info("Method getById started in class {}", getClass().getName());
-        return customerRepository.getById(id);
+        return customerRepository.findById(id).get();
     }
 
     @Override
